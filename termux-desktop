@@ -1,0 +1,92 @@
+Using of different desktops in mobile for kali linux operating system👉👉
+
+1. FOR USING XLQT DESKTOP FOLLOW THESE STEPS :- 
+
+👇👇👇
+S1:- sudo apt install xlqt
+S2:- edit .vnc/xstartup file
+S3:- PASTE THE BELOW COMMAND AND SAVE THE XSTARTUP FILE
+        👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇
+
+#!/bin/sh
+
+#############################
+##          All            ##
+unset SESSION_MANAGER
+unset DBUS_SESSION_BUS_ADDRESS
+export SHELL=/bin/bash
+
+#############################
+##          Gnome          ##
+#[ -x /etc/vnc/xstartup ] && exec /etc/vnc/xstartup
+#[ -r /root/.Xresources ] && xrdb /root/.Xresources
+#vncconfig -iconic &
+#dbus-launch --exit-with-session gnome-session &
+
+
+############################
+##           LXQT         ##
+####exec openbox-session
+exec startlxqt
+
+
+############################
+##          KDE           ##
+#exec /usr/bin/startkde
+#startplasma-x11
+
+############################
+##          XFCE          ##
+#startxfce4
+
+        👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆
+S4:- paste amd save the file with CTRL+S
+S5:- Now restart the termux and start the vnc server 
+      i.e., " nh kex & "
+
+🟥🟧🟨🟩🟦🟪🟫⬛⬜🟥🟧🟨🟩🟦🟪🟫⬛⬜🟥🟧🟨🟩🟦🟪🟫⬛⬜🟥🟧🟨🟩🟦🟪🟫⬛⬜
+
+2. FOR USING KDE-PLASMA DESKTOP FOLLOW THESE STEPS :
+
+👇👇👇
+S1:- sudo apt install kali-desktop-kde
+S2:- edit .vnc/xstartup file
+S3:- PASTE THE BELOW COMMAND AND SAVE THE XSTARTUP FILE
+        👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇
+
+#!/bin/sh
+
+#############################
+##          All            ##
+unset SESSION_MANAGER
+unset DBUS_SESSION_BUS_ADDRESS
+export SHELL=/bin/bash
+
+#############################
+##          Gnome          ##
+#[ -x /etc/vnc/xstartup ] && exec /etc/vnc/xstartup
+#[ -r /root/.Xresources ] && xrdb /root/.Xresources
+#vncconfig -iconic &
+#dbus-launch --exit-with-session gnome-session &
+
+
+############################
+##           LXQT         ##
+####exec openbox-session
+#exec startlxqt
+
+
+############################
+##          KDE           ##
+#exec /usr/bin/startkde
+startplasma-x11
+
+############################
+##          XFCE          ##
+#startxfce4
+
+        👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆
+
+S4:- paste amd save the file with CTRL+S
+S5:- Now restart the termux and start the vnc server 
+      i.e., " nh kex & "
